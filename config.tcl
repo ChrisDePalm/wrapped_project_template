@@ -30,8 +30,8 @@ set ::env(DESIGN_IS_CORE) 0
 set ::env(GLB_RT_MAXLAYER) 5
 
 # define power straps so the macro works inside Caravel's PDN
-set ::env(VDD_NETS) [list {vccd1} {vccd2} {vdda1} {vdda2}]
-set ::env(GND_NETS) [list {vssd1} {vssd2} {vssa1} {vssa2}]
+set ::env(VDD_NETS) [list {vccd1}]
+set ::env(GND_NETS) [list {vssd1}]
 
 # regular pin order seems to help with aggregating all the macros for the group project
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
@@ -40,3 +40,6 @@ set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
 set ::env(RUN_CVC) 0
 
 set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) 0
+
+set ::env(FP_IO_VTHICKNESS_MULT) 4
+set ::env(FP_IO_HTHICKNESS_MULT) 4
